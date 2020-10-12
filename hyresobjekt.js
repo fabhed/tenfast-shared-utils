@@ -14,12 +14,21 @@ export const parkeringTypes = [
 /**
  * A more specific description of the object. Currently has special values for bostad & parkering
  */
-export function getSubType (hyresobjekt) {
-	if (hyresobjekt.typ === 'bostad' && hyresobjekt.roomCount && hyresobjekt.bostadType) {
-		return `${hyresobjekt.roomCount} ${hyresobjekt.bostadType}`
-	} else if (hyresobjekt.typ === 'parkering' && hyresobjekt.parkeringType) {
-		return parkeringTypes.find(t => t.value === hyresobjekt.parkeringsType).label
+export function getSubType (ho) {
+	if (ho.typ === 'bostad' && ho.roomCount && ho.bostadType) {
+		return `${ho.roomCount} ${ho.bostadType}`
+	} else if (ho.typ === 'parkering' && ho.parkeringType) {
+		return parkeringTypes.find(t => t.value === ho.parkeringsType).label
 	} else {
 		return ""
+	}
+}
+
+export function getFullType (ho) {
+	let subType = getSubType(ho)
+	if (ho.typ && subType) {
+		return `${ho.typ}, ${subType}`
+	} else {
+		return `${ho.typ}`
 	}
 }
