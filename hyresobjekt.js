@@ -24,6 +24,10 @@ export function getSubType (ho) {
 	}
 }
 
+/**
+ * Concatenation of typ and subType
+ * @param {*} ho 
+ */
 export function getFullType (ho) {
 	let subType = getSubType(ho)
 	if (ho.typ && subType) {
