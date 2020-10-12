@@ -33,7 +33,7 @@ export function getSubType (ho) {
 	if (ho.typ === 'bostad' && ho.roomCount && ho.bostadType) {
 		return `${ho.roomCount} ${ho.bostadType}`
 	} else if (ho.typ === 'parkering' && ho.parkeringType) {
-		return parkeringTypes.find(t => t.value === ho.parkeringsType).label
+		return parkeringTypes.find(t => t.value === ho.parkeringType).label
 	} else {
 		return ""
 	}
