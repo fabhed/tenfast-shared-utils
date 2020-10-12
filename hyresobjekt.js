@@ -1,4 +1,21 @@
-export const hyresobjektTypes = ['lager', 'bostad', 'verkstad', 'förråd', 'kontor', 'garage', 'parkering', 'mark', 'lokal', 'villa']
+export const hyresobjektTypes = [
+	{ value: "bostad", label: "Bostad" },
+	{ value: "kontor", label: "Kontor" },
+	{ value: "lokal", label: "Lokal" },
+	{ value: "lager", label: "Lager" },
+	{ value: "verkstad", label: "Verkstad" },
+	{ value: "förråd", label: "Förråd" },
+	{ value: "garage", label: "Garage" },
+	{ value: "parkering", label: "Parkeringsplats" },
+	{ value: "villa", label: "Villa" },
+	{ value: "mark", label: "Mark" },
+]
+export const bostadTypes = [
+	{ value: "rum", label: "rum" },
+	{ value: "rum och kokvrå", label: "rum och kokvrå" },
+	{ value: "rum och kök", label: "rum och kök" },
+]
+
 export const parkeringTypes = [
 	{ value: "personbil", label: "Personbil" },
 	{ value: "lätt-lastbil", label: "Lätt lastbil" },
@@ -8,8 +25,6 @@ export const parkeringTypes = [
 	{ value: "husbil-liten", label: "Husbil liten" },
 	{ value: "husbil-stor", label: "Husbil stor" },
 ]
-
-
 
 /**
  * A more specific description of the object. Currently has special values for bostad & parkering
