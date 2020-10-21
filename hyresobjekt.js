@@ -1,5 +1,5 @@
 export const hyresobjektTypes = [
-	{ value: "bostad", label: "Bostad" },
+	{ value: "bostad", label: "Bostad", useRoomCount: true },
 	{ value: "kontor", label: "Kontor" },
 	{ value: "lokal", label: "Lokal" },
 	{ value: "lager", label: "Lager" },
@@ -7,7 +7,7 @@ export const hyresobjektTypes = [
 	{ value: "förråd", label: "Förråd" },
 	{ value: "garage", label: "Garage" },
 	{ value: "parkering", label: "Parkeringsplats" },
-	{ value: "villa", label: "Villa" },
+	{ value: "villa", label: "Villa", useRoomCount: true },
 	{ value: "mark", label: "Mark" },
 ]
 export const bostadTypes = [
@@ -27,10 +27,11 @@ export const parkeringTypes = [
 ]
 
 /**
- * A more specific description of the object. Currently has special values for bostad & parkering
+ * A more specific description of the object.
  */
 export function getSubType (ho) {
-	if ((ho.typ === 'bostad' || ho.typ === 'villa') && ho.roomCount && ho.bostadType) {
+	const types = hyresobjektTypes.filter(t => t.useRoomCount)
+	if (types.includes(ho.typ) && ho.roomCount && ho.bostadType) {
 		return `${ho.roomCount} ${ho.bostadType}`
 	} else if (ho.typ === 'parkering' && ho.parkeringType) {
 		return parkeringTypes.find(t => t.value === ho.parkeringType).label
