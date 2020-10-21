@@ -30,7 +30,7 @@ export const parkeringTypes = [
  * A more specific description of the object.
  */
 export function getSubType (ho) {
-	const types = hyresobjektTypes.filter(t => t.useRoomCount)
+	const types = hyresobjektTypes.filter(t => t.useRoomCount).map(t => t.value)
 	if (types.includes(ho.typ) && ho.roomCount && ho.bostadType) {
 		return `${ho.roomCount} ${ho.bostadType}`
 	} else if (ho.typ === 'parkering' && ho.parkeringType) {
