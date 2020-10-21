@@ -30,7 +30,7 @@ export const parkeringTypes = [
  * A more specific description of the object. Currently has special values for bostad & parkering
  */
 export function getSubType (ho) {
-	if (ho.typ === 'bostad' && ho.roomCount && ho.bostadType) {
+	if ((ho.typ === 'bostad' || ho.typ === 'villa') && ho.roomCount && ho.bostadType) {
 		return `${ho.roomCount} ${ho.bostadType}`
 	} else if (ho.typ === 'parkering' && ho.parkeringType) {
 		return parkeringTypes.find(t => t.value === ho.parkeringType).label
