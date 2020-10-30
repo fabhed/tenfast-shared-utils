@@ -34,7 +34,8 @@ export function getSubType (ho) {
 	if (types.includes(ho.typ) && ho.roomCount && ho.bostadType) {
 		return `${ho.roomCount} ${ho.bostadType}`
 	} else if (ho.typ === 'parkering' && ho.parkeringType) {
-		return parkeringTypes.find(t => t.value === ho.parkeringType).label
+		let type = parkeringTypes.find(t => t.value === ho.parkeringType)
+		return type ? type.label : ""
 	} else {
 		return ""
 	}
