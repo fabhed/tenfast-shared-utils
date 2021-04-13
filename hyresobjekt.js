@@ -45,11 +45,13 @@ export function getSubType (ho) {
  * Concatenation of typ and subType
  * @param {*} ho 
  */
-export function getFullType (ho) {
+export function getFullType(ho) {
 	let subType = getSubType(ho)
-	if (ho.typ && subType) {
-		return `${ho.typ}, ${subType}`
+	let typeDef = hyresobjektTypes.find(t => t.value === ho.typ) || {}
+	const { label } = typeDef
+	if (subType) {
+		return `${label}, ${subType}`
 	} else {
-		return `${ho.typ}`
+		return `${label}`
 	}
 }
