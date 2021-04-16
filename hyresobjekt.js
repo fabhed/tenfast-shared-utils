@@ -52,6 +52,6 @@ export function getFullType(ho) {
 	if (subType) {
 		return `${label}, ${subType}`
 	} else {
-		return `${label}`
+		return `${label || ""}`
 	}
 }
