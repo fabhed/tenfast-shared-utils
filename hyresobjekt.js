@@ -36,7 +36,7 @@ export function getSubType(ho) {
   if (types.includes(ho.typ) && ho.roomCount && ho.bostadType) {
     return `${ho.roomCount} ${ho.bostadType}`;
   } else if (ho.typ === "parkering" && ho.parkeringType) {
-    let type = parkeringTypes.find((t) => t.value === ho.parkeringType);
+    const type = parkeringTypes.find((t) => t.value === ho.parkeringType);
     return type ? type.label : "";
   } else {
     return "";
@@ -48,8 +48,8 @@ export function getSubType(ho) {
  * @param {*} ho
  */
 export function getFullType(ho) {
-  let subType = getSubType(ho);
-  let typeDef = hyresobjektTypes.find((t) => t.value === ho.typ) || {};
+  const subType = getSubType(ho);
+  const typeDef = hyresobjektTypes.find((t) => t.value === ho.typ) || {};
   const { label } = typeDef;
   if (subType) {
     return `${label}, ${subType}`;
