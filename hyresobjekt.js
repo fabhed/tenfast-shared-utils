@@ -57,3 +57,14 @@ export function getFullType(ho) {
     return `${label || ""}`;
   }
 }
+
+/**
+ * Gets the label for a type
+ * The label is what should be displayed in an UI.
+ * @param {String} type
+ */
+export function getTypeLabel(type) {
+  const obj = hyresobjektTypes.find((t) => t.value === type);
+  if (!obj) return type;
+  return obj.label;
+}
