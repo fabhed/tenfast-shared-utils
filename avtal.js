@@ -3,7 +3,7 @@
  * prependText[0] is for singular and prependText[1] is for plural
  * showIf1 - show number if number == 1
  */
-const convertPeriodToReadableFormat = (
+export const convertPeriodToReadableFormat = (
   period,
   showIf1 = false,
   prependText = ["", ""]
