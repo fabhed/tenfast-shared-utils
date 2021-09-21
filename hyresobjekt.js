@@ -49,7 +49,9 @@ export function getSubType(ho) {
  */
 export function getFullType(ho) {
   const subType = getSubType(ho);
-  const typeDef = hyresobjektTypes.find((t) => t.value === ho.typ) || {};
+  const typeDef = hyresobjektTypes.find((t) => t.value === ho.typ) || {
+    label: "",
+  };
   const { label } = typeDef;
   if (subType) {
     return `${label}, ${subType}`;
