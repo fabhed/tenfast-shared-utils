@@ -17,7 +17,7 @@ export const convertPeriodToReadableFormat = (
     text = "kvartal";
   } else if (text.search("v") > -1) {
     text = num > 1 ? "veckor" : "vecka";
-  } else if (text.search("d" > -1)) {
+  } else if (text.search("d") > -1) {
     text = num > 1 ? "dagar" : "dag";
   }
   if (num == 0) {
