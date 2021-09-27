@@ -1,6 +1,18 @@
 // Hyresobjekt
+
+type HyresobjektTypeValue =
+  | "bostad"
+  | "kontor"
+  | "lokal"
+  | "lager"
+  | "verkstad"
+  | "förråd"
+  | "garage"
+  | "parkering"
+  | "villa"
+  | "mark";
 interface HyresobjektType {
-  value: string;
+  value: HyresobjektTypeValue;
   label: string;
   useRoomCount?: boolean;
 }
