@@ -70,3 +70,11 @@ export function getTypeLabel(type) {
   if (!obj) return type;
   return obj.label;
 }
+
+export function getDisplayName(ho) {
+  let number = ho.nummer || ho.skvNummer;
+  if (number == null) {
+    return ho.postadress;
+  }
+  return `${ho.postadress} - nr. ${number}`;
+}
