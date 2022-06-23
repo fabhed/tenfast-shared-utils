@@ -18,10 +18,11 @@ export const bostadTypes = [
 
 export const parkeringTypes = [
   { value: "personbil", label: "Personbil" },
+  { value: "lastbil", label: "Lastbil" },
   { value: "lätt-lastbil", label: "Lätt lastbil" },
   { value: "lastbil-18ppl", label: "Lastbil 18ppl" },
-  { value: "trailer", label: "Trailer" },
   { value: "lastbil-med-släpvagn", label: "Lastbil med släpvagn" },
+  { value: "trailer", label: "Trailer" },
   { value: "husbil-liten", label: "Husbil liten" },
   { value: "husbil-stor", label: "Husbil stor" },
 ];
