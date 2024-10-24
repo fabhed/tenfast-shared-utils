@@ -11,7 +11,9 @@ export const convertPeriodToReadableFormat = (
   if (!period) return "";
   let text = period.replace(/[0-9]/, "");
   let num = period.replace(/[a-z]/i, "");
-  if (text.search("m") > -1) {
+  if (text.search("y") > -1) {
+    text = "år";
+  } else if (text.search("m") > -1) {
     text = num > 1 ? "månader" : "månad";
   } else if (text.search("q") > -1) {
     text = "kvartal";
