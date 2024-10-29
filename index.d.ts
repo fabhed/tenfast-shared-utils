@@ -10,7 +10,9 @@ type HyresobjektTypeValue =
   | "garage"
   | "parkering"
   | "villa"
-  | "mark";
+  | "mark"
+  | "byggnad"
+  | "våning";
 interface HyresobjektType {
   value: HyresobjektTypeValue;
   label: string;

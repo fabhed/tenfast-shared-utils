@@ -9,6 +9,8 @@ export const hyresobjektTypes = [
   { value: "parkering", label: "Parkeringsplats" },
   { value: "villa", label: "Villa", useRoomCount: true },
   { value: "mark", label: "Mark" },
+  { value: "byggnad", label: "Byggnad" },
+  { value: "våning", label: "Våning" },
 ];
 export const bostadTypes = [
   { value: "rum", label: "rum" },
