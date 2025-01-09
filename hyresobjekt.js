@@ -1,5 +1,6 @@
 export const hyresobjektTypes = [
   { value: "bostad", label: "Bostad", useRoomCount: true },
+  { value: "bostadsrätt", label: "Bostadsrätt", useRoomCount: true },
   { value: "kontor", label: "Kontor" },
   { value: "lokal", label: "Lokal" },
   { value: "lager", label: "Lager" },

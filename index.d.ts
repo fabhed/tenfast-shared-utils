@@ -2,6 +2,7 @@
 
 type HyresobjektTypeValue =
   | "bostad"
+  | "bostadsrätt"
   | "kontor"
   | "lokal"
   | "lager"
